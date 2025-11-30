@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: monospace;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://images.pexels.com/photos/1047051/pexels-photo-1047051.jpeg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 650px;
+    width: 1300px;
+    background:url('https://images.pexels.com/photos/23643810/pexels-photo-23643810.jpeg');
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover; 
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    float: left;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.right-side{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.left-side{
+    font-size: 15px;
+    
+}
+.left-nav{
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    margin-left: 5%;
+}
+.icons{
+    font-size: 24px;
+} 
+.right-side{
+    font-size: 15px;
+}
+.right-nav{
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+.section-right h2{
+    position: absolute;
+    right: -110px;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    font-size: 90px;
+    letter-spacing: 8px;
+    opacity: 0.7;
+}
+.section-left h2{
+    margin-top: 10%;
+    margin-left: 15%;
+    font-size: 40px;
+    color: rgb(225, 215, 215);
+    font-family: 'poppins', sans-serif;
+}
+.section-left .line{
+    margin-bottom:5%;
+    font-size: 20px;
+    width: 60%;
+    margin-left: 25%;
+
+}
+.section-left-middle,.section-right-middle{
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.section-right-middle h1{
+    font-size: 200px;
+    font-weight: 700;
+    color: white;
+    text-transform: lowercase;
+}
+.section-left-middle h1{
+    text-align: center;
+    margin: 0;
+    font-size: 180px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+     background: url('https://images.pexels.com/photos/23643810/pexels-photo-23643810.jpeg');
+    background-size: cover;   
+    background-position: center;  
+
+    -webkit-background-clip: text;
+    background-clip: text;
+}
