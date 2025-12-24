@@ -7,23 +7,10 @@ bot1.addEventListener("mouseenter", () => {
 bot1.addEventListener("mouseleave", () => {
     bot1.classList.remove("active");
 });
-
-const guavaBtn = document.querySelector(".btn1");
-const loader = document.getElementById("pageLoader");
-
-guavaBtn.addEventListener("click", () => {
-
-    // show loader
-    loader.classList.add("active");
-
-    // optional: body fade
-    document.body.style.opacity = "2";
-
-    // redirect after gif plays
-    setTimeout(() => {
-        window.location.href = "guava.html";
-    }, 3000); 
-});
+document.querySelector(".btn1")
+.addEventListener("click",function(){
+    window.location.href = "guava.html"
+})
 
 
 
