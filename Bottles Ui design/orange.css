@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  
+}
+body{
+    background-color: rgb(217, 172, 87);
+    color: rgb(243, 238, 238);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1 {
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 4rem;
+}
+a,p{
+    text-decoration: none;
+    color: rgb(209, 144, 24);
+    font-family: "DM Sans",sans-serif;
+    font-size:25px;
+    font-weight: 500;
+    line-height: 1;
+}
+.preloader-counter{
+    position: fixed;
+    top: 50svh;
+    left: 2rem;
+    transform: translateY(-50%) scale(0.25);
+    transform-origin: left bottom;
+    will-change: transform;
+    z-index: 2;
+}
+
+.preloader-counter h1{
+    font-size: clamp(2.5rem, 25vw, 25rem);
+}
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+    opacity: 0;
+  pointer-events: none;
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+}
+.hero-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path:polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    will-change: clip-path;
+    z-index: -1;
+}
+
+.hero-bg img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(2);
+    will-change: transform;
+}
+
+.header{
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    inset: 0;
+    display: flex;
+  align-items: center;     
+  justify-content: center;
+}
+
+.header h1{
+    font-size: 190px;
+    text-transform: uppercase;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    will-change: transform;
+}
+
+.hero-footer{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+}
+
+.progress-bar{
+    position: absolute;
+    left: 2rem;
+    bottom: 6rem;
+    width: calc(100% - 4rem);
+    height: 1.5px;
+    background-color: aqua;
+    transform-origin: left;
+    transform: scaleX(0);
+    will-change: transform;
+    overflow: hidden;
+}
+
+.progress-bar .progress{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(184, 141, 56, 0.893);
+    transform-origin: left;
+    transform: scaleX(0);
+    will-change: transform;
+}
+
+.word ,
+.char ,
+.digit{
+    position: relative;
+    will-change: transform;
+}
+
+.header h1 .char{
+    display: inline-block;
+  will-change: transform;
+}
+
+nav a .word,
+.hero-footer p .word{
+  transform: translateY(100%);
+}
+@keyframes dance {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-12px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(4deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.header h1.dance .char{
+  animation: dance 1.2s ease-in-out infinite;
+}
+.header h1.dance .char:nth-child(odd){
+  animation-delay: 0.1s;
+}
+.header h1.dance .char:nth-child(3n){
+  animation-delay: 0.2s;
+}
+.header h1.dance .char:nth-child(4n){
+  animation-delay: 0.3s;
+}

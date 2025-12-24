@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color:#a45797;
+  overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    width: calc(100% - 140px);
+    height: 70px;
+    padding: 0px 50px;
+    border-radius: 100px;
+    border: 2px solid black;
+    box-shadow: 0 24px 104px rgb(0 0 0 / 5%);
+    z-index: 999;
+}
+header .logo{
+    font-size: 35px;
+    font-family: 'Monda';
+}
+header .logo a{
+    text-decoration: none;
+    color: #a45797;
+}
+header #toggle-btn{
+    width: 30px;
+    cursor: pointer;
+}
+header #toggle-btn span{
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    margin: 5px 0;
+    background-color: rgb(152, 138, 138);
+    transition: all ease 0.5s;
+}
+.toggle-btn-active span:nth-child(1){
+    transform: rotate(45deg);
+}
+.toggle-btn-active span:nth-child(2){
+    transform: rotate(-45deg) translate3d(5px, -5px, 0);
+}
+
+.toggle-btn-active span:nth-child(3){
+    opacity: 0;
+}
+
+.hero-section{
+   padding-top: 170px; 
+}
+.hero-section .text-group{
+    text-align: center;
+     margin-bottom:-10px;
+}
+.text-group h1{
+    font-size: 64px;
+    font-family: 'Monda';
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: -5%;
+    
+}
+.text-group h2{
+    font-size: 24px;
+    font-family: 'Monda';
+    font-weight: normal;
+    line-height: 0;
+}
+.img-group{
+  padding-top: 130px;
+  display: flex;
+
+}
+.img-group img{
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+}
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffff;
+    padding: 130px 0 50px;
+    border-radius: 40px;
+    box-shadow: 0 24px 104px rgb(0, 0, 0 / 10%);
+    z-index: -1;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+nav.active{
+    opacity: 1;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 35px;
+}
+nav ul li a{
+    font-size: 18px;
+    letter-spacing: 7px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+nav ul li a:before{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: #000;
+ transform: scaleX(0);
+ transform-origin: left;
+ z-index: -1;
+ transition:  all ease 0.5s;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+}
+nav ul li a:hover{
+    color: azure;
+}
